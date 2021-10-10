@@ -35,13 +35,13 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
-import { useStore } from 'vuex';
-import { getTokenApi, deleteTokenApi } from '../api/token';
-import { getCategoriesApi } from '../api/category';
+import { ref, onMounted } from "vue";
+import { useStore } from "vuex";
+import { getTokenApi, deleteTokenApi } from "../api/token";
+import { getCategoriesApi } from "../api/category";
 
 export default {
-  name: 'Menu',
+  name: "Menu",
 
   setup() {
     let categories = ref(null);
@@ -55,11 +55,11 @@ export default {
 
     const logout = () => {
       deleteTokenApi();
-      location.replace('/');
+      location.replace("/");
     };
 
     const openCart = () => {
-      store.commit('setShowCart', true);
+      store.commit("setShowCart", true);
     };
 
     return {
@@ -74,7 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 .ui.menu.secondary {
-  background-image: url('../assets/header-img.jpg');
+  background-image: url("../assets/header-img.jpg");
   .item {
     color: #ffffff;
     &:hover {
