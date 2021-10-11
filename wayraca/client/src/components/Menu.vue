@@ -74,7 +74,8 @@ export default {
 
 <style lang="scss" scoped>
 .ui.menu.secondary {
-  background-image: url("../assets/header-img.jpg");
+  // background-image: url("../assets/header-img.jpg");
+  background-color: #000000;
   .item {
     color: #ffffff;
     &:hover {
