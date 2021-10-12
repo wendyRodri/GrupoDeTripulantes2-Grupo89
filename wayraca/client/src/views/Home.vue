@@ -25,6 +25,19 @@
                 <div><img class="mySlides" src="../assets/Banner5.jpg"></div>
             </div>
         </div>
+
+        <footer>
+            <div class="content">
+            <div class="logo"></div>
+                <nav>
+                <ul>
+                    <li>instagran</li>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                </ul>
+                </nav>
+            </div>
+        </footer>
         <!--HASTA AQUI VAN MIS MODIFICACIONES - DDELGADO-->
 
 
@@ -73,8 +86,36 @@ export default {
     };
   },
 };
+
+/***********Desde aqui van mis modificaciones del JS - dddelgado*********
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+  .fadeOut(1000)
+  .next()
+  .fadeIn(1000)
+  .end()
+  .appendTo('#slideshow');
+}, 3000);
+$("#slideshow > div:gt(0)").hide();
+
+$(window).on('scroll', function() {
+
+    if ($(window).scrollTop() + $(window).height() > $('.wrapper').outerHeight()) {
+      $('.arrow').hide();
+    } else {
+      $('.arrow').show();
+    }
+  });
+$('.arrow').click(function(){
+   $("html").animate({ scrollTop: $('html').prop("scrollHeight")}, 1200);
+});
+
+/**************Hasta aqui van mis modificaciones del JS - dddelgado*********/
 </script>
-<!--Desde aqui van mis modificacion -  Ddelgado-->
+
+
+<!--Desde aqui van mis modificacion de estilos -  Ddelgado-->
 <style >
 
 .containerWayraca{
