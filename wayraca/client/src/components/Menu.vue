@@ -1,39 +1,46 @@
 <template>
-  <div class="ui secondary menu">
-    <div class="ui container">
-      <!-----------Menu izquierda con logo-------------->
-      <div class="left menu">
-        <router-link class="item" to="/">
-          <img
-            class="ui small image"
-            src="../assets/logo.png"
-            alt="Ecommerce"
-          />
-        </router-link>
-        <template v-for="category in categories" :key="category.id"> 
-          <router-link class="item" :to="category.slug">
-            {{ category.title }}
+  <div class="pusher">
+    <div class="ui secondary menu">
+      <div class="ui container">
+        <!-----------Menu izquierda con logo-------------->
+        <div class="left menu">
+          <router-link class="item" to="/">
+            <img
+              class="ui small image"
+              src="../assets/logo.png"
+              alt="Ecommerce"
+            />
           </router-link>
-        </template>
-      </div>   
+          <template v-for="category in categories" :key="category.id">
+            <router-link class="item" :to="category.slug">
+              {{ category.title }}
+            </router-link>
+          </template>
+        </div>
 
-      
-<!------------------Menu derecha---------------->
-      <div class="right menu">
-        <router-link class="item" to="/contact">Contactenos</router-link>
-        <router-link class="item" to="/login" v-if="!token">
-          Iniciar Sesión
-        </router-link>
+        <!------------------Menu derecha---------------->
+        <div class="right menu">
+          <a
+            class="item"
+            href="https://web.whatsapp.com/send/?phone=+57300000000&text=tu+texto+personalizado&app_absent=0"
+            target="_blank"
+          >
+            Contactenos</a
+          >
+          <router-link class="item" to="/login" v-if="!token">
+            Iniciar Sesión
+          </router-link>
 
-        <template v-if="token">
-          <router-link class="item" to="/orders">Pedidos</router-link>
-          <span class="ui item cart">
-            <i class="shopping cart icon" @click="openCart"></i>
-          </span>
-          <span class="ui item logout" @click="logout">
-            <i class="sign-out icon"></i>
-          </span>
-        </template>
+          <template v-if="token">
+            <router-link class="item" to="/orders">Pedidos</router-link>
+            <span class="ui item cart">
+              <i class="shopping cart icon" @click="openCart"></i>
+            </span>
+            <span class="ui item logout" @click="logout">
+              <i class="sign-out icon"></i>
+            </span>
+          </template>
+        </div>
       </div>
     </div>
   </div>
@@ -47,7 +54,7 @@ import { getCategoriesApi } from "../api/category";
 
 export default {
   name: "Menu",
- 
+
   setup() {
     let categories = ref(null);
     const token = getTokenApi();
@@ -79,7 +86,7 @@ export default {
 
 <style lang="scss" scoped>
 .ui.menu.secondary {
- background-image: url("../assets/pajaros.jpg");
+  background-image: url("../assets/pajaros.jpg");
   //background-color: #000000;
   .item {
     color: #ffffff;
@@ -103,5 +110,26 @@ export default {
       }
     }
   }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 100%;
+  z-index: -2;
+  height: 180px;
+  background-image: url("../assets/footer2.png");
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  align-content: center;
+  text-align: center;
+}
+.footer .social {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 100%;
+  align-items: center;
+}
+.item img {
+  font-family: "Raleway", sans-serif;
 }
 </style>

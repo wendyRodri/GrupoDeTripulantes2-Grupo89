@@ -6,10 +6,17 @@
       <div class="social">
         <div class="item"><img class="ui avatar image" src="../assets/social/instagram.png" /></div>
         <div class="item"><img class="ui avatar image" src="../assets/social/facebook.png" /></div>
-        <div class="item"><img class="ui avatar image" src="../assets/social/whatsapp.png" /></div>
+        <div class="item" href = "https://web.whatsapp.com/send/?phone=+57300000000&text=tu+texto+personalizado&app_absent=0"><img class="ui avatar image" src="../assets/social/whatsapp.png" /></div>
       </div>
     </footer>
 </template>
+
+<script>
+export default {
+  name: "Footer",
+};
+</script>
+
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap");
 .footer {
@@ -19,17 +26,19 @@
   z-index: -2;
   height: 180px;
   background-image: url("../assets/footer2.png");
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);;
-  align-content:center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  align-content: center;
   text-align: center;
 }
 .footer .social {
- display: grid;
- grid-template-columns: 33% 33% 33%;
- grid-template-rows: 100%;
- align-items: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 100%;
+  align-items: center;
 }
-.item img{
-   font-family: "Raleway", sans-serif;
+.item img {
+  font-family: "Raleway", sans-serif;
 }
 </style>
+
+

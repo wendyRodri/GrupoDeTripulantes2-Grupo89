@@ -17,6 +17,12 @@
         </div>
         <button type="submit" class="ui button fluid primary">Enviar</button>
       </form>
+      <a
+        href="https://web.whatsapp.com/send/?phone=34555005500&text=tu+texto+personalizado&app_absent=0"
+        target="_blank"
+      >
+        <img src="../assets/social/whatsapp.png" width="50" height="50" />
+      </a>
     </div>
   </BasicLayouts>
 </template>

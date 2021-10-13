@@ -1,16 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
+import Shop from "../views/Shop.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Category from "../views/Category.vue";
 import Cart from "../views/Cart.vue";
 import Contact from "../views/Contact.vue";
+import Home from "../views/Home.vue";
+import Prueba from "../views/prueba.vue";
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home,
+    path: "/shop",
+    name: "Shop",
+    component: Shop,
   },
   {
     path: "/login",
@@ -35,6 +37,15 @@ const routes = [
   {
     path: "/:category",
     component: Category,
+  },
+  {
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/prueba",
+    name: "Prueba",
+    component: Prueba,
   },
 ];
 
