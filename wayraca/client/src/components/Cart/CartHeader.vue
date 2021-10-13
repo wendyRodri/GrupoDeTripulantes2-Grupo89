@@ -20,7 +20,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgb(3, 3, 3);
   padding: 10px 20px;
   p,
   i {

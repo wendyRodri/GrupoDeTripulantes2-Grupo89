@@ -75,12 +75,12 @@ export default {
 
 <style lang="scss" scoped>
 .ui.menu.secondary {
-  // background-image: url("../assets/header-img.jpg");
-  background-color: #000000;
+ background-image: url("../assets/pajaros.jpg");
+  //background-color: #000000;
   .item {
     color: #ffffff;
     &:hover {
-      color: #1a6899;
+      color: #0d1113;
     }
   }
   .menu.left {

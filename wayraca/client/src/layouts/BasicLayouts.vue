@@ -5,7 +5,7 @@
       <slot />
     </div>
   </div>
-  <!-- <Cart />-->
+  <Cart />
 </template>
 
 <script>
@@ -21,3 +21,5 @@ export default {
 </script>
 
 <style></style>
+
+
