@@ -20,6 +20,7 @@
       
 <!------------------Menu derecha---------------->
       <div class="right menu">
+        <router-link class="item" to="/contact">Contactenos</router-link>
         <router-link class="item" to="/login" v-if="!token">
           Iniciar Sesión
         </router-link>
