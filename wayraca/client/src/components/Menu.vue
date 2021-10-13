@@ -1,6 +1,7 @@
 <template>
   <div class="ui secondary menu">
     <div class="ui container">
+      <!-----------Menu izquierda con logo-------------->
       <div class="left menu">
         <router-link class="item" to="/">
           <img
@@ -9,12 +10,15 @@
             alt="Ecommerce"
           />
         </router-link>
-        <template v-for="category in categories" :key="category.id">
+        <template v-for="category in categories" :key="category.id"> 
           <router-link class="item" :to="category.slug">
             {{ category.title }}
           </router-link>
         </template>
-      </div>
+      </div>   
+
+      
+<!------------------Menu derecha---------------->
       <div class="right menu">
         <router-link class="item" to="/contact">Contactenos</router-link>
         <router-link class="item" to="/login" v-if="!token">
@@ -43,7 +47,7 @@ import { getCategoriesApi } from "../api/category";
 
 export default {
   name: "Menu",
-
+ 
   setup() {
     let categories = ref(null);
     const token = getTokenApi();
