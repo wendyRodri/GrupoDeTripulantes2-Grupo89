@@ -1,7 +1,7 @@
 <template>
   <div class="ui secondary menu">
     <div class="ui container">
-      <!-----------Menu derecha con logo-------------->
+      <!-----------Menu izquierda con logo-------------->
       <div class="left menu">
         <router-link class="item" to="/">
           <img
