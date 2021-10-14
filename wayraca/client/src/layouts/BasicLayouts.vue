@@ -4,6 +4,7 @@
     <div class="ui container">
       <slot />
     </div>
+    <cart />
   </div>
 </template>
 
