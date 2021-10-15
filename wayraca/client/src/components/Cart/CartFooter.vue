@@ -1,7 +1,6 @@
 <template>
   <div class="cart-footer">
     <p>Total: {{ total }}</p>
-
     <router-link to="/cart">
       <button class="ui button primary fluit btn-buy" @click="closeCart">
         Comprar
@@ -11,9 +10,9 @@
 </template>
 
 <script>
-import { ref, watchEffect } from 'vue';
+import { ref, watchEffect } from "vue";
 export default {
-  name: 'CartFooter',
+  name: "CartFooter",
   props: {
     products: Array,
     closeCart: Function,

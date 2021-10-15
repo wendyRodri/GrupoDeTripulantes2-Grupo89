@@ -1,12 +1,18 @@
 <template>
-  <div class="cart-dimmer" :class="{ open: showCart }" @click="closeCart" />
-  <div class="cart" :class="{ open: showCart }">
-    <div>
-      <CartHeader :closeCart="closeCart" />
-      <CartBody :products="products" />
-    </div>
-    <CartoFooter :products="products" :closeCart="closeCart" v-if="products" />
+  <div class="cart-dimmer" :class="{ open: showCart }" @click="closeCart">
+    <div class="cart" :class="{ open: showCart }">
+    
+       <div>
+        <CartHeader :closeCart="closeCart"/>
+        <CartBody :products="products"/>
+       </div>
+
+    <CartFooter :products="products" :closeCart="closeCart" v-if="products"/>
   </div>
+  </div>
+  
+
+  
 </template>
 
 <script>
@@ -53,6 +59,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .cart-dimmer {
   opacity: 0;
   transition: opacity 0.5 ease;
@@ -63,7 +70,7 @@ export default {
     width: 100%;
     height: 100%;
     background-color:rgba(144, 130, 130, 0.829);
-    opacity: 0.7;
+    opacity: 0.9;
   }
 }
 
@@ -86,4 +93,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox=
     transform: translateX(0);
   }
 }
+
+
 </style>

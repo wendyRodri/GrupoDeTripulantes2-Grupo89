@@ -1,11 +1,11 @@
 <template>
   <div class="basic-layout">
-    <Menu />
+    <Menu/>
     <div class="ui container">
-      <slot />
+      <slot/>
     </div>
   </div>
-  <Cart />
+  <Cart/>
 </template>
 
 <script>
@@ -15,11 +15,15 @@ export default {
   name: "BasicLayouts.vue",
   components: {
     Menu,
-    Cart,
+    Cart
   },
 };
 </script>
 
-<style></style>
+<style>
+.item{
+  font-size:1.5em;
+}
+</style>
 
 

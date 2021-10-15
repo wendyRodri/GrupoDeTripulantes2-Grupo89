@@ -35,9 +35,9 @@
 </template>
 
 <script>
-import { API_URL } from '../../utils/constants';
+import { API_URL } from "../../utils/constants";
 export default {
-  name: 'CartBody',
+  name: "CartBody",
   props: {
     products: Array,
   },
@@ -84,5 +84,5 @@ export default {
       }
     }
   }
-}
+};
 </style>
