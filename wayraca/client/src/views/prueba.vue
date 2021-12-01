@@ -54,6 +54,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { ref, onMounted } from "vue";
 import { useStore } from "vuex";
@@ -62,5 +63,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

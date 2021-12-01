@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import { API_URL } from '../utils/constants';
-import { addProductCartApi } from '../api/cart';
+import { API_URL } from "../utils/constants";
+import { addProductCartApi } from "../api/cart";
 export default {
-  name: 'Product',
+  name: "Product",
 
   props: {
     product: Object,
